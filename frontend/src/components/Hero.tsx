@@ -1,19 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import InfiniteLogo from "./InfiniteLogo";
-
-// Aceternity-style accent: sleek gradient, soft blur, rings, and animation
-function AceternityAccent() {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-      <div className="relative w-[420px] h-[120px]">
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 blur-3xl opacity-70 rounded-full w-[340px] h-16 bg-gradient-to-r from-accent-400 via-accent-200 to-accent-400 animate-pulse" />
-        <div className="absolute border border-accent-400/50 rounded-full w-[360px] h-20 left-1/2 top-4 -translate-x-1/2" style={{borderWidth:'2px'}}/>
-      </div>
-    </div>
-  );
-}
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -23,16 +10,18 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-background via-accent-100 to-background text-foreground relative overflow-hidden">
-      {/* Aceternity-inspired effect */}
-      <AceternityAccent />
       <div className="container mx-auto px-4 text-center relative z-10 pt-20">
         <div className="mb-8">
           <InfiniteLogo />
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in font-display">
-           dev<span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Xsphere</span>
-        </h1>
+        <div className="relative flex justify-center items-center w-full mb-6">
+          <div className="inline-flex items-center border-2 border-accent-400/50 rounded-full px-6 py-1 bg-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold animate-fade-in font-display text-center">
+              dev<span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Xsphere</span>
+            </h1>
+          </div>
+        </div>
         
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-700 dark:text-gray-200 animate-fade-in font-body">
           Bringing together like-minded developers through meetups, tech events, and open source contributions. 

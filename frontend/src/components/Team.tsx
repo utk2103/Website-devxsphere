@@ -106,6 +106,17 @@ const Teams = [
       instagram: "https://www.linkedin.com/in/utk2103/",
     },
   },
+  {
+    id: 10,
+    pfpImg: "/Team/SANCHIT_CNCG_FINAL.jpg",
+    name: "Sanchit Kathpalia",
+    post: "Developer & community advocate",
+    links: {
+      linkedIn: "https://www.linkedin.com/in/sanchit-kathpalia-a841b5252/",
+      twitter: "https://x.com/khthpalia",
+      instagram: "https://x.com/khthpalia",
+    },
+  },
 ];
 
 const Team = () => {
@@ -136,13 +147,13 @@ const Team = () => {
         >
           {Teams.map((member) => (
             <SwiperSlide key={member.id}>
-              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                 <CardContent className="p-6 text-center flex flex-col items-center">
                   <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-blue-300 dark:border-blue-600 bg-gray-100 dark:bg-gray-700">
                     <img
                       src={member.pfpImg}
                       alt={`${member.name}'s profile`}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover${member.name === "Yashdeep Singh" ? " object-center" : " object-top"}`}
                       loading="lazy"
                     />
                   </div>
